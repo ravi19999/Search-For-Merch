@@ -46,10 +46,15 @@ class SignUp extends React.Component {
     }
   };
 
-  handleChange = (event) => {
-    const { name, value } = event.target;
+  handleChange = async (event) => {
+    const { email, password } = event.target;
 
-    this.setState({ [name]: value });
+    try {
+      auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
