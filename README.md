@@ -1,4 +1,4 @@
-Hosted at https://wonderful-mirzakhani-98293e.netlify.app/
+Hosted at https://search-for-merch.herokuapp.com/
 ## Available Scripts
 
 ### `yarn start`
