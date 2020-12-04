@@ -6,7 +6,7 @@ import CollectionPage from "../collection/collection.component";
 
 import {
   firestore,
-  // convertCollectionsSnapshotToMap,
+  convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
 class ShopPage extends React.Component {
@@ -15,10 +15,10 @@ class ShopPage extends React.Component {
   componentDidMount() {
     const CollectionRef = firestore.collection("collections");
 
-    // CollectionRef.onSnapshot(async (snapshot) => {
-    //   convertCollectionsSnapshotToMap(snapshot);
-    //   console.log(snapshot);
-    // });
+    CollectionRef.onSnapshot(async (snapshot) => {
+      convertCollectionsSnapshotToMap(snapshot);
+      console.log(snapshot);
+    });
   }
 
   render() {
